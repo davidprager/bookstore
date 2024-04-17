@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Insert the name of your site   -->
-    <title></title>
+    <title>Treble Clef</title>
     <link rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
@@ -11,9 +10,8 @@
   <body>
     <header>
       <div id="leftHeader">
-        <!-- Insert an image file that should be in the static folder -->
         <a href="{{ url_for('home')}}">
-          <!-- Insert the name of your site as the alt text  -->
+          <img src="static/images/misc/treble-clef-logo.jpg" alt="Treble Clef logo">
           <img src="" alt="----- logo">
         </a>
       </div>
@@ -25,12 +23,12 @@
         <div class="dropdown">
             <p class="dropdownSelect">Select Category</p>
             <div class="dropdownContent">
-               <!-- This for looop assumes that you are passing a list of category rows, retrieved from the database -->
+               <!-- This for loop assumes that you are passing in a list of category rows, retrieved from the database -->
                {% for category in categories %}
                    <!-- Insert a p element that contains a link with the categoryid as a GET parameter
                    The category name should be what is displayed
                    The general format should be
-                   <p><a href="">catname</a></p>          -->
+                   <p><a href="url with category Id parameter">category name</a></p>          -->
               {%endfor%}
             </div>
         </div>
